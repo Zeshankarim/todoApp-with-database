@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- //firebase fist line apk link -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <!-- copy paste upper lineand must edit   -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+
+    <!-- copy paste 3rd script of firebase -->
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyCbJT3QoJm-eha2VUTWvwMAHC5_4sEpYz8",
+          authDomain: "todo-app-with-firebase-cf9fa.firebaseapp.com",
+          databaseURL: "https://todo-app-with-firebase-cf9fa.firebaseio.com",
+          projectId: "todo-app-with-firebase-cf9fa",
+          storageBucket: "todo-app-with-firebase-cf9fa.appspot.com",
+          messagingSenderId: "367971290887",
+          appId: "1:367971290887:web:2f1b8572f48e6b96c13fa2",
+          measurementId: "G-N4T8W6LMZZ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+      </script>
+
+
+</head>
+<body>
+    <div>
+        <input type="text" id="input_data">
+        <button onclick="add()">Add To Do</button>
+        <button onclick="dellAll()">delete all</button>
+    </div>
+    <div>
+        <ol id="listt">
+
+        </ol>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
