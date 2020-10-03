@@ -1,6 +1,10 @@
 
 function add(){
 
+    var todo_item=document.getElementById("input_data")
+    var database=firebase.database().ref("todos")
+    var key=database.push().key;
+
 
     var inputt=document.getElementById("input_data");
     var inputData=inputt.value;
@@ -39,6 +43,7 @@ editBtn.appendChild(textt)
 li.appendChild(editBtn)
 editBtn.setAttribute("onclick","edit(this)")
 
+
 console.log(editBtn) 
 
   
@@ -51,7 +56,7 @@ function dellAll(){
    
 }
 function edit(e){
-    var editedText=prompt("Enter a new value")
+    var editedText=prompt("Enter a new value",e.parentNode.firstChild.nodeValue)
     e.parentNode.firstChild.nodeValue=editedText
     
 }
