@@ -1,12 +1,19 @@
 
 function add(){
-
-    var todo_item=document.getElementById("input_data")
-    var database=firebase.database().ref("todos")
-    var key=database.push().key;
-
-
     var inputt=document.getElementById("input_data");
+    
+    
+    var database=firebase.database().ref('todos')
+    var key=database.push().key;
+   
+    var todo= {
+        value: inputt.value,
+        key: key
+    };
+    database.child(key).set(todo)
+
+
+    
     var inputData=inputt.value;
 
 //for contorelling empety value
